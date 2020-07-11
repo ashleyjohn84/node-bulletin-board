@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "ashkube-d053"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "ashkube-d053"
+    spec:
+      containers:
+        - name: "ashkube-d053"
+          image: "ashkubereg.azurecr.io/ashkube"
+          ports:
+          - containerPort: 8080
